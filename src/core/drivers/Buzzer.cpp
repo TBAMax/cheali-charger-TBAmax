@@ -15,6 +15,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+//Why the fuck it needs so many functions? Teemo
 #include "Hardware.h"
 #include "Buzzer.h"
 #include "Settings.h"
@@ -23,7 +24,7 @@
 namespace Buzzer {
     uint16_t begin_time_U16_;
     uint16_t last_value_;
-    SoundType sound_;
+    SoundType sound_;    //Soundtype from sound.h?
 
 
     uint8_t getKeyboard(uint16_t time);
@@ -51,7 +52,7 @@ void Buzzer::sound(Buzzer::SoundType s)
         return;
     sound_ = s;
     begin();
-    Time::delayDoIdle(50);
+    Time::delayDoIdle(50);  //What the fuck is that? General delay?
 }
 
 void Buzzer::soundOff()
